@@ -51,3 +51,20 @@ def login():
         return jsonify({"error": "Incorrect password"}), 401
 
     return jsonify({"id": user.id, "name": user.name, "email": user.email, "type": user.type})
+
+# --- product routes
+@app.route("/products", methods=["POST"])
+def create_product():
+    data = request.json
+    product = Product(
+        name=data["name"],
+        price=data["price"]
+    )
+    db.session.add(product)
+    db.session.commit()
+    return jsonify({"id": product.id, "name": product.name, "price": product.price})
+
+@app.route("/products", methods=["GET"])
+def get_products():
+    products = Product.query.all()
+    return jsonify([{"id": p.id, "name": p.name, "price": p.price} for p in products])
