@@ -1,0 +1,289 @@
+.dashboard-container {
+    min-height: 100%;
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #205DCE;
+    border-radius: 10px;
+}
+
+.dashboard-header h1 {
+    color: white;
+    font-family: "K2D", Helvetica;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info span {
+    color: white;
+    font-family: "Inter", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: "Inter", Helvetica;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.order-form-section {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.order-form-section h2 {
+    color: #000000;
+    font-family: "Inter", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.order-form {
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: #000000;
+    font-family: "Inter", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: "Inter", Helvetica;
+    font-size: 15px;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #205dcd;
+    border-color: #205dcd;
+}
+
+.price-display {
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.price-display strong {
+    color: #000000;
+    font-family: "Inter", Helvetica;
+    font-size: 18px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.place-order-btn,
+.cancel-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-family: "Inter", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.place-order-btn {
+    background-color: #205dcd;
+    color: white;
+}
+
+.place-order-btn:hover {
+    background-color: #1a4ba8;
+}
+
+.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #5a6268;
+}
+
+.orders-section {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.orders-section h2 {
+    color: #000000;
+    font-family: "Inter", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.no-orders {
+    text-align: center;
+    color: #666;
+    font-family: "Inter", Helvetica;
+    font-size: 16px;
+    padding: 40px;
+}
+
+.orders-list {
+    display: grid;
+    gap: 20px;
+}
+
+.order-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.order-info {
+    flex: 1;
+}
+
+.order-info h3 {
+    color: #000000;
+    font-family: "Inter", Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.order-info p {
+    color: #000000;
+    font-family: "Inter", Helvetica;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-transit {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.status-delivered {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.order-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 20px;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Inter", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.edit-btn {
+    background-color: #3ECBEA;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #138496;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .order-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .order-actions {
+        flex-direction: row;
+        margin-left: 0;
+    }
+}
