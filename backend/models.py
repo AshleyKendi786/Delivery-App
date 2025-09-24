@@ -21,10 +21,10 @@ class Product(db.Model):
     orders = db.relationship("Order", backref="product")
 
 class Order(db.Model):
-    __tablename__ = "users"
+    __tablename__ = "orders"
     id = db.Column(db.Integer, primary_key = True)
     customer_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable = False)
     product_id = db.Column(db.Integer, db.ForeignKey("products.id"), nullable = False)
     address = db.Column(db.String(100), nullable = False)
-    price = db.column(db.Float, nullable = False)
+    price = db.Column(db.Float, nullable = False)
     status = db.Column(db.String, default = "pending") # pending, start delivery, delivered
