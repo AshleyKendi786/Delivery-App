@@ -1,0 +1,227 @@
+.dashboard-container {
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    padding: 20px;
+}
+
+.dashboard-header {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #205DCE;
+    border-radius: 10px;
+}
+
+.dashboard-header h1 {
+    color: white;
+    font-family: "K2D", Helvetica;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info span {
+    color: white;
+    font-family: "Inter", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: "Inter", Helvetica;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.orders-section {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.orders-section h2 {
+    color: #000000;
+    font-family: "Inter", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.no-orders {
+    text-align: center;
+    color: #666;
+    font-family: "Inter", Helvetica;
+    font-size: 16px;
+    padding: 40px;
+}
+
+.orders-list {
+    display: grid;
+    gap: 20px;
+}
+
+.order-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.order-info {
+    flex: 1;
+}
+
+.order-info h3 {
+    color: #000000;
+    font-family: "Inter", Helvetica;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.order-info p {
+    color: #000000;
+    font-family: "Inter", Helvetica;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-transit {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.status-delivered {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.order-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 20px;
+}
+
+.status-dropdown-container {
+    position: relative;
+}
+
+.status-btn,
+.delete-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Inter", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.status-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.status-btn:hover {
+    background-color: #218838;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.status-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    margin-top: 2px;
+}
+
+.status-option {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    background: white;
+    color: #333;
+    font-family: "Inter", Helvetica;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.status-option:hover {
+    background-color: #f8f9fa;
+}
+
+.status-option:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+.status-option:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .order-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .order-actions {
+        flex-direction: row;
+        margin-left: 0;
+    }
+}
