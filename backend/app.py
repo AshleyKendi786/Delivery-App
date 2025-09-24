@@ -90,7 +90,7 @@ def create_order():
 
     # create the order
     order = Order(
-        customer_id=customer_id, product_id=product.id, address=address, rice=price or product.price, status="pending"
+        customer_id=customer_id, product_id=product.id, address=address, price=price or product.price, status="pending"
     )
     db.session.add(order)
     db.session.commit()
