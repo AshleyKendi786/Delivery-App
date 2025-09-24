@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
 from models import db, User, Product, Order
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///delivery_app.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
