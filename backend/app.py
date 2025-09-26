@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify
 from models import db, User, Product, Order
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app)
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///delivery_app.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL", "sqlite:///delivery_app.db")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db.init_app(app)
@@ -183,4 +184,4 @@ def get_customer_orders(customer_id):
     return jsonify(result)
 
 if __name__ == "__main__":
-    app.run(port=5555, debug=True)
+    app.run(port=5555)
