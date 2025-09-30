@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from .models import db, User, Product, Order
+from models import db, User, Product, Order
 from flask_cors import CORS
 import os
 
